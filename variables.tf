@@ -4,7 +4,7 @@ variable "env" {
 }
 
 variable "app_name" {
-  default = "mlflow-terraform"
+  default = "imz-mlflow-terraform"
 }
 
 variable "cidr" {

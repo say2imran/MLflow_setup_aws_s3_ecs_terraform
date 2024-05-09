@@ -3,7 +3,7 @@ resource "aws_db_instance" "mlflow-db" {
   db_name                = "mlflowdb"
   identifier             = "${var.app_name}-${var.env}-db"
   engine                 = "postgres"
-  engine_version         = "15.2"
+  engine_version         = "15.4"
   instance_class         = "db.t3.micro"
   username               = "mlflow_db_user"
   password               = random_password.db_password.result
