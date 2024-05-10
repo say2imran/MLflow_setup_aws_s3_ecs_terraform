@@ -22,7 +22,8 @@ resource "aws_ecs_task_definition" "mlflow" {
           },
         ]
         essential = true
-        image     = "${aws_ecr_repository.mlflow_ecr.repository_url}:latest"
+        #image     = "${aws_ecr_repository.mlflow_ecr.repository_url}:latest"
+        image     = "ghcr.io/mlflow/mlflow:latest"
         logConfiguration = {
           logDriver = "awslogs"
           options = {
