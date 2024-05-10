@@ -43,15 +43,15 @@ variable "your_vpn" {
 
 
 variable "region" {
-  default = "eu-central-1"
+  default = "ap-southeast-1"
 }
 
 variable "zone_a" {
-  default = "eu-central-1a"
+  default = "ap-southeast-1a"
 }
 
 variable "zone_b" {
-  default = "eu-central-1b"
+  default = "ap-southeast-1b"
 }
 
 variable "internet_cidr" {

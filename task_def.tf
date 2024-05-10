@@ -28,7 +28,7 @@ resource "aws_ecs_task_definition" "mlflow" {
           options = {
             awslogs-create-group  = "true"
             awslogs-group         = "/ecs/${var.ecs_service_name}/${var.ecs_task_name}"
-            awslogs-region        = "eu-central-1"
+            awslogs-region        = "ap-southeast-1"
             awslogs-stream-prefix = "ecs"
           }
         }
