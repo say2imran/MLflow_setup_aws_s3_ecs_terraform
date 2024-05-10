@@ -22,13 +22,14 @@ resource "aws_ecs_task_definition" "mlflow" {
           },
         ]
         essential = true
-        image     = "${aws_ecr_repository.mlflow_ecr.repository_url}:latest"
+        #image     = "${aws_ecr_repository.mlflow_ecr.repository_url}:latest"
+        image     = "ghcr.io/mlflow/mlflow:latest"
         logConfiguration = {
           logDriver = "awslogs"
           options = {
             awslogs-create-group  = "true"
             awslogs-group         = "/ecs/${var.ecs_service_name}/${var.ecs_task_name}"
-            awslogs-region        = "eu-central-1"
+            awslogs-region        = "ap-southeast-1"
             awslogs-stream-prefix = "ecs"
           }
         }

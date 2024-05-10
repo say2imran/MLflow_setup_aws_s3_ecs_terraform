@@ -8,7 +8,7 @@ terraform {
   backend "s3" {
     bucket = "mlflow-terraform-test-state"
     key    = "test/terraform.tfstate"
-    region = "eu-central-1"
+    region = "ap-southeast-1"
   }
   required_version = ">= 1.5"
 }
